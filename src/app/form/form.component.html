@@ -1,0 +1,98 @@
+<div class="row">
+    <div class="col-md-12">
+      <!-- Basic Form Inputs card start -->
+      <app-card [cardOptionBlock]="true">
+          <div class="row">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                <div class="panel panel-primary">
+                  <div class="panel-heading bg-primary" style="margin-bottom:30px">
+                    Default Panel
+                  </div>
+                  <div class="panel-body">
+                      <form>
+                          <div class="row">
+                            <div class="form-group col-md-4">
+                              <label>Name</label>
+                              <input type="text" id="name" class="form-control">
+                            </div>
+                            <div class="from-group col-md-4">
+                              <label>Roll Number</label>
+                              <input type="text" id="name" class="form-control">
+                            </div>
+                            <div class="form-group col-md-4">
+                              <label>Phone Number</label>
+                              <input type="text" id="phoneno" class="form-control">
+                            </div>
+                            <div class="form-group col-md-4">
+                              <label>Age</label>
+                              <input type="number" id="age" class="form-control">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label>Gender</label>
+                                <!-- <select class="form-control" id="gender">
+                                  <option value="disabled"></option>
+                                  <option value="male">Male</option>
+                                  <option value="female">Female</option>
+                                </select> -->
+                                <ng-select [ngClass]="'ng-select'" [options]="simpleOption" > </ng-select>
+                          </div>
+                          <div class="form-group col-md-4">
+                                <label>School</label>
+                                <input type="text" id="school" class="form-control">
+                          </div>
+                          <div class="form-group col-md-4">
+                                <label>Class</label>
+                                <input type="text" id="class" class="form-control">
+                          </div>
+                          <div class="form-group col-md-4">
+                                <label>Section</label>
+                                <input type="text" id="section" class="form-control">
+                          </div>
+                          <div class="col-md-12">
+                                <button class="btn btn-grd-primary" style="margin-bottom:20px;">view</button>
+                          </div>
+                          <div class="checkbox-color checkbox-primary check">
+                              <input type="checkbox" (click)="toggleClick()" id="checkbox0" >
+                              <label for="checkbox0">Family Details</label>
+                          </div>
+                          <div *ngIf="toggleParentDetails">
+                              <div class="row">
+                              <div class="form-group col-md-4">
+                                  <label>Father Name</label>
+                                  <input type="text" class="form-control" id="fathername">
+                              </div>
+                              <div class="form-group col-md-4">
+                                <label>Mother Name</label>
+                                <input type="text" class="form-control" id="mothername">
+                              </div>
+                              <div class="form-group col-md-4">
+                                <label>Occupation</label>
+                                <input type="text" class="form-control" id="occupation">
+                              </div>
+                              <div class="form-group col-md-4">
+                                <label>Father age</label>
+                                <input type="number" class="form-control" id="fatherage">
+                              </div>
+                              <div class="form-group col-md-4">
+                                <label>Mother Age</label>
+                                <input type="text" class="form-control" id="motherage">
+                              </div>
+                              <div class="form-group col-md-4">
+                                <label>Address</label>
+                                <input type="text" class="form-control" id="address">
+                              </div>
+                              </div> 
+                              <div class="col-md-12">
+                                  <button class="btn btn-grd-primary">Submit</button>
+                              </div>
+                        </div>
+                          </div>
+                    
+                    </form>
+            </div>
+            </div>
+          </div>
+          </div>
+      </app-card>
+    </div>
+</div>
