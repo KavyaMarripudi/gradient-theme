@@ -1,10 +1,12 @@
 import {Component, OnInit} from '@angular/core';
 import {NavigationEnd, Router} from '@angular/router';
+import { FormService } from './form.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  providers: [FormService]
 })
 export class AppComponent implements OnInit {
   title = 'Gradient Able 5+';

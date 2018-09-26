@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { FormService } from '../form.service';
 // import {SelectOptionService} from './.././shared/elements/select-option.service';
 // import {IOption} from 'ng-select';
 
@@ -10,26 +11,24 @@ import { NgForm } from '@angular/forms';
     styleUrls :['./form.component.css']
 })
 
-export class FormComponent {
+export class FormComponent implements OnInit{
 
       toggleParentDetails:boolean=false;
       simpleOption:any[];
+      studentDetails:any[];
 
-    //   simpleOption: Array<IOption> = this.selectOptionService.getCharacters();
-    //     selectedOption = '3';
-    //     isDisabled = true;
-    //     characters: Array<IOption>;
-    //     selectedCharacter = '3';
-    //     timeLeft = 5;
-   
+    // formService: any;
 
-    // constructor(public selectOptionService: SelectOptionService) { }
+    
+    constructor(private formService: FormService) { }
    ngOnInit(){
        this.simpleOption=[
            {label:"male",value:'Male'},
            {label:"female",value:'Female'},
            {label:"other", value:'other'}
         ]
+
+        this.studentDetails = this.formService.getStudents();
     } 
       toggleClick(){
           console.log("click")

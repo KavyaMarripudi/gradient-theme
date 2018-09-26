@@ -1,0 +1,18 @@
+
+<app-card [cardOptionBlock]="true">
+    <div class="row">
+            <div class="col-md-4">
+                <button (click)="showFirst()" class="btn btn-primary">Button1</button>
+                <!-- <div *ngIf="toggleButton1"><p>Button1 is clicked</p></div> -->
+                <app-childbutton *ngIf="toggleButton"></app-childbutton>
+            </div>
+            <div class="col-md-4">
+                <button (click)="showSecond()"  class="btn btn-primary">Button2</button>
+                <app-childbutton1 *ngIf="toggleButton1"></app-childbutton1>       
+            </div>
+            <div class="col-md-4">
+                <button (click)="showThird()" class="btn btn-primary">Button3</button>
+                <app-childbutton2 *ngIf="toggleButton2"></app-childbutton2>
+            </div>
+    </div>
+</app-card>

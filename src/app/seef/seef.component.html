@@ -1,0 +1,57 @@
+<div class="container">
+<div class="row">
+  <div class="col-md-12">
+      <!-- <app-card [cardOptionBlock]="true"> -->
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading bg-primary" style="margin-bottom:30px">
+                    </div>
+                      <div class="panel-body">
+                        <form (ngSubmit)="onSubmit()" #f="ngForm" >
+                          <a routerLink="/image"><img src="https://uploads.bizbilla.com/company-logo/2015/259465/seef-it-technologies-private-limited_company_logo.jpeg"></a>
+                          <div class="row">
+                              <div class="form-group col-md-6">
+                                <label>Name</label>
+                                <input type="text" id="name" class="form-control" name="name" ngModel required #name="ngModel" pattern="[A-Za-z]{6,}">
+                                <span class="help-block" *ngIf="!name.valid && name.touched">Name must contain minimum 6 characters</span>
+                              </div>
+                              <div class="form-group col-md-6">
+                                <label>RollNo</label>
+                                <input type="text" id="rollno" class="form-control" name="rollno" ngModel required #rollno="ngModel" pattern="[0-9]{1,}" >
+                                <span class="help-block" *ngIf="!rollno.valid && rollno.touched">Please enter a number</span>
+                              </div>
+                              <div class="form-group col-md-6">
+                                <label>Branch</label>
+                                <ng-select [ngClass]="'ng-select'" [options]="simpleOption" name="branch" ngModel required #branch="ngModel"> </ng-select>
+                                <span class="help-block" *ngIf="!branch.valid && branch.touched">Please select a branch</span>
+                              </div>
+                              <div class="form-group col-md-6">
+                                <label>Year</label>
+                                <input type="text" id="year" class="form-control" name="year" ngModel required #year="ngModel" pattern="[0-4]{1}">
+                                <span class="help-block" *ngIf="!year.valid && year.touched">Please enter an year</span>
+                              </div>
+                              <div class="form-group col-md-6">
+                                <label>Section</label>
+                                <ng-select [ngClass]="'ng-select'" [options]="selectionOption" name="section" ngModel required #section="ngModel"> </ng-select>
+                                <span class="help-block" *ngIf="!section.valid && section.touched">Select a section</span>
+                              </div>
+                            </div>
+                              <div class="row">
+                                <div class="col-md-6">
+                                  <button class="btn btn-primary" style="margin-bottom:20px;" [disabled]="!f.valid">Submit</button>
+                                </div>
+                                <div class="col-md-6">
+                                    <button class="btn btn-warning">Cancel</button>
+                                </div>
+                              </div>
+                          
+                        </form>
+                      </div>
+                </div>
+            </div>
+        </div>
+      <!-- </app-card> -->
+  </div>
+</div>
+</div>
